@@ -8,6 +8,11 @@ use Aws\Exception\AwsException;
  */
 define('BUCKET_NAME', 'leasefetcher');
 
+/**
+ * The region of the bucket - this will never change
+ */
+define('BUCKET_REGION', 'eu-west-2');
+
 /*
  ******************************************************
  ******************** IMPORTANT ***********************
@@ -96,7 +101,7 @@ try
 	 */
 	$s3Client = new S3Client([
 	    'version' => 'latest',
-	    'region'  => 'eu-west-2',
+	    'region'  => BUCKET_REGION,
 	    'credentials' => [
 	        'key'    => $key,
 	        'secret' => $secret,
