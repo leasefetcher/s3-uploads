@@ -1,0 +1,1 @@
+This repo gives some example code (PHP) on how to automate the upload of your pricing sheet to the LeaseFetcher Amazon S3 bucket.
