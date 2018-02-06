@@ -76,7 +76,7 @@ $filename = 'filename.csv';
  * 
  * @var string
  */
-$pathToLocalFile = 'pricing.csv';
+$pathToLocalFile = '/path/to/pricing.csv';
 
 /**
  * The path to which the file will be uploaded e.g.
