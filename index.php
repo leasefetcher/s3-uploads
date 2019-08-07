@@ -42,7 +42,8 @@ define('BUCKET_REGION', 'eu-west-2');
  * 
  * @var string
  */
-$key = 'AKIAQAZWDM2LRK4P6UCJ';
+$key = 'ACCESS_KEY_ID';
+
 
 /**
  *
@@ -52,7 +53,7 @@ $key = 'AKIAQAZWDM2LRK4P6UCJ';
  * 
  * @var string
  */
-$secret = 'dq2Ozp8/nm96/UdI2AD6B2nMUzrmQL3W/Y4/mL65';
+$secret = 'SECRET_ACCESS_KEY';
 
 /**
  * 
@@ -63,7 +64,7 @@ $secret = 'dq2Ozp8/nm96/UdI2AD6B2nMUzrmQL3W/Y4/mL65';
  * 
  * @var integer
  */
-$directoryName = 55;
+$directoryName = 1;
 
 /**
  * The name of the file which will be given to the uploaded
@@ -72,7 +73,7 @@ $directoryName = 55;
  * 
  * @var string
  */
-$filename = 'test.csv';
+$filename = 'filename.csv';
 
 /**
  *
@@ -81,7 +82,7 @@ $filename = 'test.csv';
  * 
  * @var string
  */
-$pathToLocalFile = '/Users/alexanderlaing/Desktop/covault-runcloud.sql';
+$pathToLocalFile = '/path/to/pricing.csv';
 
 /*
 |--------------------------------------------------------------------------
