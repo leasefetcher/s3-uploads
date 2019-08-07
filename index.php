@@ -24,8 +24,17 @@ define('BUCKET_REGION', 'eu-west-2');
  * https://docs.aws.amazon.com/aws-sdk-php/v3/guide/getting-started/basic-usage.html
  */
 
+
+/*
+|--------------------------------------------------------------------------
+| Start Updating Variables
+|--------------------------------------------------------------------------
+| 
+| Please update the following variables as appropriate
+|
+*/
+
 /**
- *************** UPDATE THIS VARIABLE **************
  *
  * Your S3 Access Key ID. This can be obtained from your 
  * LF dashboard on the Account Settings page in the 
@@ -33,10 +42,9 @@ define('BUCKET_REGION', 'eu-west-2');
  * 
  * @var string
  */
-$key = 'ACCESS_KEY_ID';
+$key = 'AKIAQAZWDM2LRK4P6UCJ';
 
 /**
- ************** UPDATE THIS VARIABLE **************
  *
  * Your S3 Access Key Secret. This can be obtained from your 
  * LF dashboard on the Account Settings page in the 
@@ -44,10 +52,9 @@ $key = 'ACCESS_KEY_ID';
  * 
  * @var string
  */
-$secret = 'SECRET_ACCESS_KEY';
+$secret = 'dq2Ozp8/nm96/UdI2AD6B2nMUzrmQL3W/Y4/mL65';
 
 /**
- ************** UPDATE THIS VARIABLE **************
  * 
  * The directory to which your sheet will be uploaded.
  * This can be obtained from your LF dashboard on the
@@ -56,41 +63,32 @@ $secret = 'SECRET_ACCESS_KEY';
  * 
  * @var integer
  */
-$directoryName = 1;
+$directoryName = 55;
 
 /**
- ***************************************************
- ************** UPDATE THIS VARIABLE **************
- **************************************************
- *
  * The name of the file which will be given to the uploaded
  * file in the bucket. Please note that if there is a file of the
  * same name already in the bucket it will be overwritten.
  * 
  * @var string
  */
-$filename = 'filename.csv';
+$filename = 'test.csv';
 
 /**
- **************************************************
- ************** UPDATE THIS VARIABLE **************
- **************************************************
  *
  * This is the path to the file on your server which
  * will be uploaded
  * 
  * @var string
  */
-$pathToLocalFile = '/path/to/pricing.csv';
+$pathToLocalFile = '/Users/alexanderlaing/Desktop/covault-runcloud.sql';
 
-/**
- * The path to which the file will be uploaded e.g.
- * 1/filename.csv. You do not need to update this 
- * variable
- * 
- * @var string
- */
-$uploadPath = sprintf('%d/%s', $providerId, $filename);
+/*
+|--------------------------------------------------------------------------
+| End Updating Variables
+|--------------------------------------------------------------------------
+|
+*/
 
 try
 {
@@ -113,7 +111,7 @@ try
 	 */
 	$result = $s3Client->putObject([
         'Bucket'     => BUCKET_NAME,
-        'Key'        => $uploadPath,
+        'Key'        => sprintf('%d/%s', $directoryName, $filename),
         'SourceFile' => $pathToLocalFile,
     ]);
 
