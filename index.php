@@ -6,7 +6,7 @@ use Aws\Exception\AwsException;
 /**
  * The name of the bucket - this will never change
  */
-define('BUCKET_NAME', 'leasefetcher');
+define('BUCKET_NAME', 'leasefetch');
 
 /**
  * The region of the bucket - this will never change
